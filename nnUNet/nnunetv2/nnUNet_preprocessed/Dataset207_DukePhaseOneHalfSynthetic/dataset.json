@@ -1,0 +1,12 @@
+{
+    "channel_names": {
+        "0": "dce1"
+    },
+    "labels": {
+        "background": 0,
+        "whole tumor": 1
+    },
+    "numTraining": 382,
+    "file_ending": ".nii.gz",
+    "dataset_release": "1.0"
+}
