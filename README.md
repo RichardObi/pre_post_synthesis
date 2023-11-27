@@ -25,5 +25,36 @@ You may find some examples of synthetic nifti files in [synthesis/examples](synt
 - [Train-test-splits](nnUNet/nnunetv2/nnUNet_preprocessed/Dataset208_DukePreSynthetic/splits_final_pre_post_syn.json) of the segmentation dataset.
 - [Script](nnUNet/custom_scripts/full_pipeline.sh) to run the full nnunet pipeline on the Duke dataset.
 
+
+## Run the model
+Model weights are stored on on [Zenodo](https://zenodo.org/records/10210945) and made available via the [medigan](https://github.com/RichardObi/medigan) library.
+
+To create your own post-contrast data, simply run:
+
+```command
+pip install medigan
+```
+
+```python
+# import medigan and initialize Generators
+from medigan import Generators
+generators = Generators()
+
+# generate 10 samples with model 23 (00023_PIX2PIXHD_BREAST_DCEMRI). 
+# Also, auto-install required model dependencies.
+generators.generate(model_id='00023_PIX2PIXHD_BREAST_DCEMRI', num_samples=10, install_dependencies=True)
+```
+
+## Reference
+Please consider citing our work if you found it useful for your research:
+```bibtex
+@article{osuala2023pre,
+  title={{Pre-to Post-Contrast Breast MRI Synthesis for Enhanced Tumour Segmentation}},
+  author={Osuala, Richard and Joshi, Smriti and Tsirikoglou, Apostolia and Garrucho, Lidia and Pinaya, Walter HL and Diaz, Oliver and Lekadir, Karim},
+  journal={arXiv preprint arXiv:2311.10879},
+  year={2023}
+  }
+```
+
 ## Acknowledgements
 This repository borrows code from the [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) and the [nnUNet](https://github.com/MIC-DKFZ/nnUNet) repositories. The 254 tumour segmentation masks used in this study were provided by [Caballo et al](https://doi.org/10.1002/jmri.28273).
