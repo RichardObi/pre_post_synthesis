@@ -11,7 +11,7 @@ defusedxml==0.7.1
 dominate==2.8.0
 exceptiongroup==1.1.1
 filelock==3.12.0
-fonttools==4.39.4
+fonttools==4.43.0
 google-auth==2.18.1
 google-auth-oauthlib==1.0.0
 greenlet==2.0.2
