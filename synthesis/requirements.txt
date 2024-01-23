@@ -33,7 +33,7 @@ opencv-contrib-python==4.7.0.72
 packaging==23.1
 PasteDeploy==3.0.1
 pbkdf2==1.3
-Pillow==9.5.0
+Pillow==10.2.0
 plaster==1.1.2
 plaster-pastedeploy==1.0.1
 pluggy==1.0.0
